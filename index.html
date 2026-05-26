@@ -240,27 +240,29 @@ a{color:inherit;text-decoration:none}
   }
 
   .bf-full-logo{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-    margin-bottom:14px;
-    padding:10px 12px;
-    border-radius:999px;
-    background:linear-gradient(90deg,#fff7ed,#fff1e6);
-    border:2px solid #ff6a00;
-    color:#ff5a00;
-    font-size:13px;
-    font-weight:900;
-    text-transform:uppercase;
-    letter-spacing:.5px;
-  }
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin-top:4px;
+  padding:5px 9px;
+  border-radius:999px;
+  background:#fff4ed;
+  border:1px solid #d93d00;
+}
 
-  .bf-full-logo img{
-    height:24px;
-    width:auto;
-    display:block;
-  }
+.bf-full-logo img{
+  height:16px;
+  width:auto;
+  display:block;
+}
+
+.bf-full-logo span{
+  font-size:10px;
+  font-weight:900;
+  color:#c2410c;
+  text-transform:uppercase;
+  letter-spacing:.2px;
+}
 
   .bf-title{
     color:#111 !important;
@@ -365,46 +367,36 @@ a{color:inherit;text-decoration:none}
 <!-- PRODUCT CARD -->
 <section class="bf-product-card">
 
-  <div class="bf-full-logo">
-    <img src="/img/full.webp" alt="Envio Full">
-    <span>ENVIO FULL • ENTREGA RÁPIDA</span>
-  </div>
-
   <h1 class="bf-title">
+    <span class="bf-check">✓</span>
     Pistola Airsoft Rossi P226 SP2022 Full Metal 6mm
   </h1>
 
-  <div class="bf-price-box">
-    <span class="bf-old-price">De R$ 129,90</span>
+  <span class="bf-price">R$ 69,90</span>
 
-    <span class="bf-price">R$ 69,90</span>
+<div class="bf-full-logo">
+  <img src="/img/full.webp" alt="Envio Full">
+  <span>Envio Full • Entrega rápida</span>
+</div>
+
+    <div class="bf-full-logo">
+      <img src="/img/full.webp" alt="Envio Full">
+      <span>Envio Full • Entrega rápida</span>
+    </div>
 
     <span class="bf-installment">
-      Produto Tático • Estoque Limitado
+      Produto tático • Estoque limitado
     </span>
   </div>
 
   <div class="bf-benefits">
-
-    <div class="bf-benefit">
-      <span class="bf-benefit-icon">🎯</span>
-      <span>Calibre 6mm</span>
-    </div>
-
-    <div class="bf-benefit">
-      <span class="bf-benefit-icon">⚙️</span>
-      <span>Full Metal</span>
-    </div>
-
-    <div class="bf-benefit">
-      <span class="bf-benefit-icon">🚚</span>
-      <span>Envio Full</span>
-    </div>
-
+    <div class="bf-benefit">🎯 <span>Calibre 6mm</span></div>
+    <div class="bf-benefit">⚙️ <span>Full Metal</span></div>
+    <div class="bf-benefit">🚚 <span>Envio Full</span></div>
   </div>
 
   <a href="/checkout/" class="e-button-base">
-    Comprar Agora
+    Comprar agora
   </a>
 
 </section>
