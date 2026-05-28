@@ -1,6 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+<!-- PRECONNECT -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://cdn.utmify.com.br">
+<link rel="dns-prefetch" href="https://cdn.utmify.com.br">
+
+<script>
+window.addEventListener('load', function () {
+
+  // ATRASA O GTM
+  setTimeout(function () {
+
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event:'gtm.js'
+      });
+
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer' ? '&l='+l : '';
+
+      j.async=true;
+      j.defer=true;
+
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+
+      f.parentNode.insertBefore(j,f);
+
+    })(window,document,'script','dataLayer','GTM-NHVSFL8L');
+
+  }, 2500); // 2.5 segundos
+
+
+  // ATRASA O UTMIFY
+  setTimeout(function () {
+
+    var s = document.createElement('script');
+
+    s.src = 'https://cdn.utmify.com.br/scripts/utms/latest.js';
+
+    s.async = true;
+    s.defer = true;
+
+    s.setAttribute('data-utmify-prevent-xcod-sck', '');
+    s.setAttribute('data-utmify-prevent-subids', '');
+
+    document.head.appendChild(s);
+
+  }, 3500); // 3.5 segundos
+
+});
+</script>
+  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
 <title>Pistola Airsoft Rossi P226 SP2022 Full Metal 6mm</title>
@@ -1592,4 +1647,14 @@ document.querySelectorAll('.bf-pagination a').forEach(function(a){
 </script>
 
 </body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-NHVSFL8L"
+    height="0"
+    width="0"
+    style="display:none;visibility:hidden">
+  </iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->  
 </html>
