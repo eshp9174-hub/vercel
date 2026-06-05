@@ -3,215 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Checkout</title>
+<title>Escolha o frete</title>
 
 <style>
 *{box-sizing:border-box}
-body{
-  margin:0;
-  background:#222;
-  font-family:Arial,Helvetica,sans-serif;
-  color:#1d2430;
-}
-.phone{
-  max-width:390px;
-  margin:0 auto;
-  min-height:100vh;
-  background:#fff;
-}
-.header{
-  text-align:center;
-  padding:10px 16px 12px;
-  border-bottom:1px solid #eee;
-}
-.header b{
-  font-size:15px;
-}
-.safe{
-  color:#18b889;
-  font-size:12px;
-  margin-top:3px;
-}
-.steps{
-  display:flex;
-  height:6px;
-}
-.steps span{
-  flex:1;
-  margin-right:5px;
-}
+body{margin:0;background:#222;font-family:Arial,Helvetica,sans-serif;color:#1d2430}
+.phone{max-width:390px;margin:0 auto;min-height:100vh;background:#fff}
+.header{text-align:center;padding:12px 16px;border-bottom:1px solid #eee}
+.header b{font-size:15px}
+.safe{color:#18b889;font-size:12px;margin-top:3px}
+.steps{display:flex;height:6px}
+.steps span{flex:1;margin-right:5px}
 .steps span:nth-child(odd){background:#ff2b5f}
 .steps span:nth-child(even){background:#18d6d0}
-.box{
-  padding:18px 16px;
-  border-bottom:8px solid #f5f5f5;
-}
-.title-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-weight:800;
-  font-size:15px;
-}
-.sub{
-  font-size:12px;
-  color:#8b95a1;
-  margin-top:3px;
-}
-.input{
-  width:100%;
-  height:46px;
-  border:1px solid #e6e8ec;
-  border-radius:10px;
-  padding:0 13px;
-  font-size:15px;
-  margin-top:10px;
-  outline:none;
-}
-.input:focus{
-  border-color:#ff2b5f;
-}
-.store{
-  font-size:14px;
-  font-weight:800;
-  margin-bottom:14px;
-}
-.product{
-  display:flex;
-  gap:12px;
-  align-items:center;
-}
-.product img{
-  width:72px;
-  height:72px;
-  object-fit:cover;
-  border-radius:8px;
-  border:1px solid #eee;
-}
-.p-name{
-  flex:1;
-  font-size:14px;
-  font-weight:800;
-  line-height:1.3;
-}
-.price{
-  color:#ff2b5f;
-  font-size:18px;
-  font-weight:900;
-  margin-top:8px;
-}
-.qty{
-  font-size:12px;
-  color:#777;
-}
-.summary-row{
-  display:flex;
-  justify-content:space-between;
-  margin:16px 0;
-  font-size:14px;
-}
-.summary-row.total{
-  font-size:17px;
-  font-weight:900;
-}
-.summary-row.total span:last-child{
-  color:#ff2b5f;
-}
-.closed{
-  opacity:.45;
-  pointer-events:none;
-}
-.shipping{
-  display:none;
-}
-.shipping.show{
-  display:block;
-}
-.fretes{
-  display:grid;
-  gap:10px;
-  margin-top:12px;
-}
-.frete{
-  border:1px solid #e6e8ec;
-  border-radius:12px;
-  padding:13px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  cursor:pointer;
-}
-.frete.active{
-  border:2px solid #ff2b5f;
-  background:#fff7fa;
-}
-.frete b{
-  display:block;
-  font-size:15px;
-}
-.frete small{
-  color:#7d8793;
-}
-.free{
-  color:#12a67f;
-  font-weight:900;
-}
-.radio{
-  width:20px;
-  height:20px;
-  border-radius:50%;
-  border:2px solid #ff2b5f;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.frete.active .radio::after{
-  content:"";
-  width:10px;
-  height:10px;
-  background:#ff2b5f;
-  border-radius:50%;
-}
-.pay{
-  padding:16px;
-  background:#fff;
-  position:sticky;
-  bottom:0;
-  border-top:1px solid #eee;
-}
-.final{
-  display:none;
-  width:100%;
-  height:52px;
-  border:0;
-  border-radius:30px;
-  background:#ff2b5f;
-  color:#fff;
-  font-size:16px;
-  font-weight:900;
-  cursor:pointer;
-  animation:pulse 1.2s infinite;
-}
-.final.show{
-  display:block;
-}
-.alert{
-  display:none;
-  background:#fff3f6;
-  color:#ff2b5f;
-  padding:10px;
-  border-radius:10px;
-  font-size:13px;
-  font-weight:800;
-  margin-top:10px;
-}
-.alert.show{
-  display:block;
-}
+.box{padding:18px 16px;border-bottom:8px solid #f5f5f5}
+.title-row{display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:15px}
+.sub{font-size:12px;color:#8b95a1;margin-top:3px}
+.input{width:100%;height:46px;border:1px solid #e6e8ec;border-radius:10px;padding:0 13px;font-size:15px;margin-top:10px;outline:none}
+.input:focus{border-color:#ff2b5f}
+.store{font-size:14px;font-weight:800;margin-bottom:14px}
+.product{display:flex;gap:12px;align-items:center}
+.product img{width:72px;height:72px;object-fit:cover;border-radius:8px;border:1px solid #eee}
+.p-name{flex:1;font-size:14px;font-weight:800;line-height:1.3}
+.price{color:#ff2b5f;font-size:18px;font-weight:900;margin-top:8px}
+.qty{font-size:12px;color:#777}
+.shipping{display:none}
+.shipping.show{display:block}
+.fretes{display:grid;gap:10px;margin-top:12px}
+.frete{border:1px solid #e6e8ec;border-radius:12px;padding:13px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.frete.active{border:2px solid #ff2b5f;background:#fff7fa}
+.frete b{display:block;font-size:15px}
+.frete small{color:#7d8793}
+.free{color:#12a67f;font-weight:900}
+.radio{width:20px;height:20px;border-radius:50%;border:2px solid #ff2b5f;display:flex;align-items:center;justify-content:center}
+.frete.active .radio::after{content:"";width:10px;height:10px;background:#ff2b5f;border-radius:50%}
+.alert{display:none;background:#fff3f6;color:#ff2b5f;padding:10px;border-radius:10px;font-size:13px;font-weight:800;margin-top:10px}
+.alert.show{display:block}
+.summary-row{display:flex;justify-content:space-between;margin:16px 0;font-size:14px}
+.summary-row.total{font-size:17px;font-weight:900}
+.summary-row.total span:last-child{color:#ff2b5f}
+.pay{padding:16px;background:#fff;position:sticky;bottom:0;border-top:1px solid #eee}
+.final{display:none;width:100%;height:52px;border:0;border-radius:30px;background:#ff2b5f;color:#fff;font-size:16px;font-weight:900;cursor:pointer;animation:pulse 1.2s infinite}
+.final.show{display:block}
 @keyframes pulse{
-  0%{transform:scale(1)}
-  50%{transform:scale(1.035);box-shadow:0 0 0 8px rgba(255,43,95,.13)}
-  100%{transform:scale(1)}
+0%{transform:scale(1)}
+50%{transform:scale(1.035);box-shadow:0 0 0 8px rgba(255,43,95,.13)}
+100%{transform:scale(1)}
 }
 </style>
 </head>
@@ -223,20 +60,6 @@ body{
   <div class="header">
     <b>Resumo do pedido</b>
     <div class="safe">✓ Seus dados estão seguros conosco</div>
-  </div>
-
-  <div class="box">
-    <div class="title-row">
-      <div>
-        📍 Preencha seus dados
-        <div class="sub">Nome, e-mail e documento</div>
-      </div>
-      <div>›</div>
-    </div>
-
-    <input class="input" placeholder="Nome completo">
-    <input class="input" placeholder="Telefone">
-    <input class="input" placeholder="CPF">
   </div>
 
   <div class="steps">
@@ -260,15 +83,14 @@ body{
   <div class="box">
     <div class="title-row">
       <div>
-        Endereço de entrega
-        <div class="sub">O frete será liberado após preencher o número</div>
+        📍 Informe seu CEP
+        <div class="sub">Depois preencha o número para liberar o frete</div>
       </div>
+      <div>›</div>
     </div>
 
-    <input id="cep" class="input" placeholder="CEP">
-    <input id="rua" class="input" placeholder="Rua / Endereço">
-    <input id="numero" class="input" placeholder="Número da residência">
-    <input id="complemento" class="input" placeholder="Complemento opcional">
+    <input id="cep" class="input" placeholder="Digite seu CEP" inputmode="numeric" maxlength="9">
+    <input id="numero" class="input" placeholder="Número da residência" inputmode="numeric">
 
     <div id="alerta" class="alert">Agora escolha uma opção de frete abaixo.</div>
   </div>
@@ -285,7 +107,7 @@ body{
       <div class="frete" data-frete="rapido">
         <div>
           <b>Entrega Expressa</b>
-          <small>Receba mais rápido na sua região</small>
+          <small>Entrega prioritária para sua região</small>
         </div>
         <div>
           <div class="free">Grátis</div>
@@ -337,6 +159,7 @@ const LINKS_FRETE = {
   normal: "https://SEU-LINK-FRETE-NORMAL.com"
 };
 
+const cep = document.getElementById("cep");
 const numero = document.getElementById("numero");
 const shippingBox = document.getElementById("shippingBox");
 const alerta = document.getElementById("alerta");
@@ -344,8 +167,14 @@ const finalizar = document.getElementById("finalizar");
 
 let freteSelecionado = null;
 
-numero.addEventListener("input", () => {
-  if(numero.value.trim().length >= 1){
+cep.addEventListener("input", () => {
+  let v = cep.value.replace(/\D/g,"").slice(0,8);
+  if(v.length > 5) v = v.slice(0,5) + "-" + v.slice(5);
+  cep.value = v;
+});
+
+function verificarLiberacao(){
+  if(cep.value.replace(/\D/g,"").length === 8 && numero.value.trim().length >= 1){
     shippingBox.classList.add("show");
     alerta.classList.add("show");
   }else{
@@ -355,7 +184,10 @@ numero.addEventListener("input", () => {
     freteSelecionado = null;
     document.querySelectorAll(".frete").forEach(f => f.classList.remove("active"));
   }
-});
+}
+
+cep.addEventListener("input", verificarLiberacao);
+numero.addEventListener("input", verificarLiberacao);
 
 document.querySelectorAll(".frete").forEach(frete => {
   frete.addEventListener("click", () => {
